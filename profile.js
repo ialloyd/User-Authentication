@@ -1,4 +1,4 @@
-//Profile Page
+// profile.js file
 if (!localStorage.getItem('user')) {
     window.location.hash = '';
 } else {

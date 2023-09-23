@@ -1,4 +1,3 @@
-//Signup page
 const inputElements = document.querySelectorAll('input')
 const message = document.getElementById('message')
 

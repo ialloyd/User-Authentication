@@ -1,11 +1,14 @@
-//shared.js
-function checkLogin() {
-    if (window.location.hash === '#profile' && !localStorage.getItem('user')) {
+function isLoggedIn() {
+    return !!localStorage.getItem('user');
+}
+
+function redirect() {
+    if (window.location.hash === '#profile' && !isLoggedIn()) {
         window.location.hash = '';
-    } else if (window.location.hash !== '#profile' && localStorage.getItem('user')) {
+    } else if (window.location.hash !== '#profile' && isLoggedIn()) {
         window.location.hash = 'profile';
     }
 }
 
-window.addEventListener('load', checkLogin);
-window.addEventListener('hashchange', checkLogin);
+window.addEventListener('load', redirect);
+window.addEventListener('hashchange', redirect);
