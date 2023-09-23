@@ -86,3 +86,7 @@ input[type='submit'] {
     z-index: -1;
     bottom: -20%;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
