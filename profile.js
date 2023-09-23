@@ -1,6 +1,6 @@
 // profile.js file
 if (!localStorage.getItem('user')) {
-    window.location.hash = '';
+    window.location.href = 'index.html';
 } else {
     const userDetails = JSON.parse(localStorage.getItem('user'));
     const container = document.getElementsByClassName('container')[0];
@@ -26,5 +26,5 @@ const logoutBtn = document.getElementsByTagName('button')[0];
 
 logoutBtn.addEventListener('click', function () {
     localStorage.removeItem('user');
-    window.location.hash = '';
+    window.location.href = 'index.html';
 });

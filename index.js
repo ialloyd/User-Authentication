@@ -2,7 +2,7 @@ const inputElements = document.querySelectorAll('input')
 const message = document.getElementById('message')
 
 if (localStorage.getItem('user')) {
-    window.location.hash = 'profile';
+    window.location.href = 'profile.html';
 }
 
 function generateAccessToken() {
@@ -38,5 +38,5 @@ document.getElementById('signupForm').addEventListener('submit', function (event
 
     localStorage.setItem('user', JSON.stringify(userDetails));
     message.textContent = 'Signup Successful!'
-    setTimeout(() => { window.location.hash = 'profile'; }, 2000);
+    setTimeout(() => { window.location.href = 'profile.html'; }, 2000);
 });
